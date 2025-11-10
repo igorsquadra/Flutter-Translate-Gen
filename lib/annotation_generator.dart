@@ -8,7 +8,7 @@ abstract class AnnotationGenerator<T> extends Generator
 {
     const AnnotationGenerator();
 
-    TypeChecker get typeChecker => TypeChecker.fromRuntime(T);
+    TypeChecker get typeChecker => TypeChecker.typeNamed(T);
 
     @override
     FutureOr<String> generate(LibraryReader library, BuildStep buildStep) async
